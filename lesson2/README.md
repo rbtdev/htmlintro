@@ -92,15 +92,15 @@ The only change we've made to the lesson1 HTML file here is that we have replace
 		}
 	</style>
 	<script>
-		var sayHello = function (greeting) {
-			document.write(greeting);
+		var sayHello = function () {
+			document.write("Hello World!!");
 		}
 	</script>
 	</head>
 	<body>
 		<div class = 'title'>
 			<script>
-				sayHello('Hello World!!')
+				sayHello();
 			</script>
 		</div>
 	</body>
@@ -116,16 +116,15 @@ The only change we've made to the lesson1 HTML file here is that we have replace
 		}
 	</style>
 	<script>
-		var myName = "Robert";
-		var sayHello = function (greeting) {
-			document.write(greeting);
+		var sayHello = function (name) {
+			document.write("Hello " + name);
 		}
 	</script>
 	</head>
 	<body>
 		<div class = 'title'>
 			<script>
-				sayHello('Hello World!!')
+				sayHello("Robert");
 			</script>
 		</div>
 	</body>
