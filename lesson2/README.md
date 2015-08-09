@@ -31,8 +31,10 @@ var add = function (a, b) {
 	var c = a + b;
 	return c;
 }
-```
 
+var sum = add(1,2);
+```
+In this example, we have declared a function called `add` which takes two "arguments" `a` and `b`.  The function declares an "internal" variable called `c` and assigns it the value of `a + b`.  The final statement in the function causes the value of the function to be equal to the value of `c` which in this case is the sum of `a` and `b`.  The final line of the example "calls" the function `add` by declaring a variable `sum` and assigning it the value of the function `sum` with the arguments 1, and 2.  The result will be that `sum` contains the value 3.
 
 ### The 'document' Object
 As mentioned above, once the browser has loaded the HTML file it converts the HTML into an internal representation called the DOM.  The DOM is available to Javascript functions by referencing the 'document' object. 
