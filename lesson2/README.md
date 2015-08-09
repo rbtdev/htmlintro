@@ -59,3 +59,74 @@ Drawing from the HTML document from lesson 1:
 </html>
 ```
 The goal of this example is to update the lesson 1 html to add a simple javascript function which will take the place of the string "Hello World!!".  
+
+The fist step in this example is to add a function which will write the string "Hello World" into the DOM where our original "Hello World" appeared.  As mentioned earlier the "document" object is created when the the browser loads the HTML file and is available to Javascript code.  For this example we will use a function contained in the document object called "write".  The `document.write()` function takes a string as an argument and inserts that string into the DOM.  Using this knowledge we can change the lesson 1 html to the following:
+
+```html
+<html>
+	<head>
+	<style>
+		.title {
+			color: red;
+		}
+	</style>
+	</head>
+	<body>
+		<div class = 'title'>
+			<script>
+				document.write('Hello World!!')
+			</script>
+		</div>
+	</body>
+</html>
+```
+
+The only change we've made to the lesson1 HTML file here is that we have replaced the "Hello World!!" inside the 'title' `<div>` with the `document.write('Hello World!!')`.  Although this example shows how to dynamically access and modify the DOM, by itself is really isn't very useful.  We've typed more and acheievd the same effect.  So, our next example will move the `document.write()` call into it's own function called "sayHello":
+
+```html
+<html>
+	<head>
+	<style>
+		.title {
+			color: red;
+		}
+	</style>
+	<script>
+		var sayHello = function (greeting) {
+			document.write(greeting);
+		}
+	</script>
+	</head>
+	<body>
+		<div class = 'title'>
+			<script>
+				sayHello('Hello World!!')
+			</script>
+		</div>
+	</body>
+</html>
+```
+
+```html
+<html>
+	<head>
+	<style>
+		.title {
+			color: red;
+		}
+	</style>
+	<script>
+		var myName = "Robert";
+		var sayHello = function (greeting) {
+			document.write(greeting);
+		}
+	</script>
+	</head>
+	<body>
+		<div class = 'title'>
+			<script>
+				sayHello('Hello World!!')
+			</script>
+		</div>
+	</body>
+</html>
